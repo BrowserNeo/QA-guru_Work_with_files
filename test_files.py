@@ -5,7 +5,7 @@ import csv
 from PyPDF2 import PdfReader
 from openpyxl import load_workbook
 
-# Создаем папку и архив
+# Создаем папку и архив commit
 os.mkdir('resources')
 zip_file = zipfile.ZipFile('resources\Архив содержимого.zip', 'w')
 
