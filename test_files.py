@@ -8,13 +8,13 @@ from PyPDF2 import PdfReader
 from openpyxl import load_workbook
 
 # Создаем папку и архив
-os.mkdir('../resources')
-myzip = zipfile.ZipFile('../resources/my_zip.zip', 'w')
+os.mkdir('../resources/tmp')
+myzip = zipfile.ZipFile('../resources/tmp/my_zip.zip', 'w')
 
 
 # Добавляем файлы в архив
 def test_archive_zip():
-    myzip = zipfile.ZipFile(filename('../resources/my_zip.zip'), 'w')
+    myzip = zipfile.ZipFile(filename('../resources/tmp/my_zip.zip'), 'w')
     myzip.write(filename('../resources/username.csv'))
     myzip.write(filename('../resources/file_example_XLSX_50.xlsx'))
     myzip.write(filename('../resources/docs-pytest-org-en-latest.pdf'))
@@ -29,7 +29,7 @@ def test_read_zip():
 
 # Разархивируем файл
 def test_unzip_files():
-    unzip_file = zipfile.ZipFile('../resources/my_zip.zip')
+    unzip_file = zipfile.ZipFile('../resources/tmp/my_zip.zip')
     unzip_file.extractall('../resources/tmp/')
     unzip_file.close()
 
