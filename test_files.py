@@ -42,7 +42,7 @@ def test_read_pdf():
 def test_read_xlsx():
     workbook = load_workbook('resources/tmp/resources/file_example_XLSX_50.xlsx')
     sheet = workbook.active
-    name = sheet.cell(row=2, column=1).value
+    name = sheet.cell(row=2, column=2).value
     assert 'Dulce' == name
 
 # Проверка csv
@@ -50,7 +50,7 @@ def test_read_csv_():
     with open('resources/tmp/resources/username.csv') as f:
         reader = csv.reader(f)
         headers = next(reader)
-    assert 'First_name' in str(headers)
+    assert 'Username' in str(headers)
 
 # Удаляем папку
 
