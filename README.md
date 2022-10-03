@@ -17,3 +17,5 @@
 
 
 
+
+https://github.com/aleksandr-kotlyar/qa_guru_python_1_8_files#11-Работа-с-PDF
