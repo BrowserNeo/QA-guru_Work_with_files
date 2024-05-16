@@ -1,5 +1,5 @@
-pytest~=7.1.8
-selene~=2.0.0b5
+pytest~=7.1.2
+selene~=2.0.0b3
 PyPDF2~=2.5.0
 openpyxl~=3.0.10
 allure-pytest>=2.8.18
